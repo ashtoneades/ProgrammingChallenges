@@ -11,6 +11,7 @@ SELECT state, SUM(revenue) AS "Total Revenue"
 FROM website_revenue 
 GROUP BY state
 ORDER BY revenue DESC limit 3;
+#The third best state (Texas) generated $34,080 in revenue.
 
 #Question 3
 SELECT m.cost, m.impressions, m.clicks, c.id, c.name
