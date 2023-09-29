@@ -1,9 +1,10 @@
 #Questions are answered using MySQL
 
 #Question 1
-SELECT SUM(impressions), date
+SELECT SUM(impressions) AS "Sum of Impressions", date AS "Date"
 FROM marketing_performance
-GROUP BY date;
+GROUP BY date
+ORDER BY SUM(impressions) DESC;
 
 #Question 2
 SELECT state, SUM(revenue) AS "Total Revenue"
