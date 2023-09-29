@@ -6,8 +6,9 @@ FROM marketing_performance
 GROUP BY date;
 
 #Question 2
-SELECT state, revenue
+SELECT state, SUM(revenue) AS "Total Revenue"
 FROM website_revenue 
+GROUP BY state
 ORDER BY revenue DESC limit 3;
 
 #Question 3
@@ -24,6 +25,8 @@ INNER JOIN website_revenue AS w ON w.campaign_id = c.id
 WHERE c.name = 'Campaign5'
 GROUP BY w.state;
 #GA generated the most conversions for this campaign
+
+#Question 5
 
 #Bonus Question 6
 SELECT DAYNAME(date) AS day_of_week, AVG(clicks) AS average_clicks
