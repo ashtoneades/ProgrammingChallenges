@@ -44,8 +44,8 @@ GROUP BY c.name
 ORDER BY effectiveness_score DESC
 LIMIT 1;
 #I created this query to look at which campaign was the most effective. I decided to weigh revenue, conversions, 
-  clicks, cost, and impressions all equally to create an "effectiveness score". In my opinion, campaign 4 was the most
-  effective. The company could change the weights of each variable based on what metrics they want to prioritize.
+  #clicks, cost, and impressions all equally to create an "effectiveness score". In my opinion, campaign 4 was the most
+  #effective. The company could change the weights of each variable based on what metrics they want to prioritize.
 
 #Bonus Question 6
 SELECT DAYNAME(date) AS day_of_week, AVG(clicks) AS average_clicks
